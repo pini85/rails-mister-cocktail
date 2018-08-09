@@ -8,7 +8,7 @@
 
 <% end %>
 
-<%= image_tag @cocktail.photo.url(:bright_face) %>
+<%= cl_image_tag @cocktail.photo.url(:bright_face) %>
 <br>
 <%= link_to "Add a new dose to this cocktail", new_cocktail_dose_path(@cocktail) %>
 <%= link_to 'Edit', edit_cocktail_path(@cocktail) %> |
