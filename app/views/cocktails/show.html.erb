@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+<h1><%= @cocktail.name %><br><br></h1>
+
+<h4>This cocktail is made of:</h4>
+<% @cocktail.doses.each do |dose| %>
+<p> <%= dose.amount %> of <%= dose.ingredient.name %></p>
+<!-- we are associating doses with ingreideints by belongs to so thats why we can get ingrdieents. Adter we got ingredients we can get the ingrdeients attributes which is name here -->
+
+<% end %>
+<%= link_to "Add a new dose to this cocktail", new_cocktail_dose_path(@cocktail) %>
+<%= link_to 'Edit', edit_cocktail_path(@cocktail) %> |
+<%= link_to 'Back', cocktails_path %>|
+<%= link_to "back to list", cocktails_path %>
