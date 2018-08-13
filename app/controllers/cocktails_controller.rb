@@ -19,6 +19,7 @@ class CocktailsController < ApplicationController
       redirect_to @cocktail, notice: "A new cocktail was successfully created"
     else
       render :new
+
     end
   end
 
@@ -33,9 +34,11 @@ class CocktailsController < ApplicationController
     end
 
     def destroy
-
+      # @cocktail = Cocktail.find(params[:id])
       @cocktail.destroy
 
+      # @cocktail.photo.destroy
+      # @cocktail.photocloudinary.uploader.destroy
       redirect_to cocktails_path, notice: "Cocktail was successfully deleted"
     end
   end

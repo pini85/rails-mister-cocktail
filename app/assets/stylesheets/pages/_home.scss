@@ -1,0 +1,50 @@
+// Specific CSS for your home-page
+
+.background {
+  background: url("tropical.jpg");
+  background-size: cover;
+  height: 681px;
+
+}
+.text-center {
+  text-align: center
+}
+.text {
+  font-family: 'Pacifico', cursive;
+}
+.white {
+  color: white;
+}
+
+.menu-container {
+     margin: 45px;
+    padding: 18px;
+  text-align: center;
+
+}
+.menu-cocktail {
+    position: relative;
+    border: 3px solid white;
+    margin: 49px;
+    height: 467px;
+    width: 895px;
+
+}
+
+.cocktail-btn {
+border: 2px solid white;
+padding: 10px;
+margin-top: 10px;
+font-family:'Roboto',sans-serif;
+font-size: 25px;
+font-weight: bold;
+border-radius: 2px;
+}
+.cocktail-btn:hover {
+  text-decoration: none;
+  color: white;
+
+}
+.padding {
+padding: 55px;
+}

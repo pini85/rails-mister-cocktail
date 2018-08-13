@@ -1,25 +1,38 @@
-    <p id="notice"><%= notice %></p>
-    <h1>List of all cocktails!</h1>
-<table>
-  <tbody>
-    <%@cocktails.each do |cocktail| %>
-      <tr>
-         <td><%=cocktail.name%></td>
-         <td><%= link_to "Show", cocktail %></td>
-         <td><%= link_to "Edit", edit_cocktail_path(cocktail) %></td>
-         <td><%= link_to "Delete", cocktail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
-<%= link_to 'New cocktail',new_cocktail_path %>
-<br>
-<%= cl_image_tag("akjnblq7fcikbfkd4v5v",
-      width: 400, height: 300, crop: :fill) %>
+<div class="body">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
-<%= cl_image_tag("b14jknixxpijivfldvg2",
-      width: 150, height: 150, crop: :thumb, gravity: :face) %> <br>
+  </style>
+  <div class ="background ">
+   <p id="notice"><%= notice %></p>
+   <h1 class="text-center font text white">-What cocktail shall we drink today?-</h1>
+   <div class ="menu-container center">
+     <%= link_to "New Cocktail", new_cocktail_path, class: "cocktail-btn" %>
+   </div>
+   <div class ="menu-cocktail">
+       <%@cocktails.each do |cocktail| %>
 
+         <%= link_to cocktail_path(cocktail) do%>
+        <!--  to get the link you must put a do and an end and inside the do and end you put whatever html you want -->
+         <div class="card">
+          <%= cl_image_tag cocktail.photo.url(:bright_face, :effect => "art:eucalyptus"), :class => "card" %>
+           <div class="card-description">
+            <h2> <%= cocktail.name %></h2>
+           <!--  to get the cocktail name ibside the card you must create a div becasue that is the ler wagon layout componenets been divined
+           </div> -->
+         </div>
+          <% end %>
+
+
+
+
+
+
+         <%= link_to "Edit", edit_cocktail_path(cocktail) %>
+         <%= link_to "Delete", cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+     <% end %>
+    </div>
+  </div>
+</div>
 
