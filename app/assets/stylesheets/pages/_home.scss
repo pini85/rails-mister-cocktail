@@ -1,11 +1,16 @@
 // Specific CSS for your home-page
 
-.background {
-  background: url("tropical.jpg");
+body.cocktails.index {
+background: url("tropical.jpg") no-repeat center center fixed ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  height: 681px;
 
+
+// background-image: url("https://kitt.lewagon.com/placeholder/cities/paris");
 }
+
 .text-center {
   text-align: center
 }
@@ -22,13 +27,17 @@
   text-align: center;
 
 }
+
 .menu-cocktail {
-    position: relative;
+    display: flex;
+    // flex-wrap: wrap;
+    // flex-direction: row;
+
+    // position: relative;
     border: 3px solid white;
     margin: 49px;
     height: 467px;
     width: 895px;
-
 }
 
 .cocktail-btn {

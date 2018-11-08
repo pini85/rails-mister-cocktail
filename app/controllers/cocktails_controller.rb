@@ -32,7 +32,7 @@ class CocktailsController < ApplicationController
     else
       render :edit
     end
-
+end
     def destroy
       # @cocktail = Cocktail.find(params[:id])
       @cocktail.destroy
@@ -41,7 +41,7 @@ class CocktailsController < ApplicationController
       # @cocktail.photocloudinary.uploader.destroy
       redirect_to cocktails_path, notice: "Cocktail was successfully deleted"
     end
-  end
+
   def set_cocktail
     @cocktail = Cocktail.find(params[:id])
   end

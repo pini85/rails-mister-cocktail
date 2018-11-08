@@ -1,5 +1,6 @@
 .card {
-  height: 175px;
+  height: 156px;
+  width: 156px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
@@ -7,6 +8,10 @@
   position: relative;
   border: 3px solid white;
   border-radius: 3px;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  margin-left: 22px;
+  margin-right: -3px;
 
 }
 .card-user {
@@ -25,16 +30,20 @@
 }
 .card-description {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+    left: 52px;
+    bottom: -42px;
 }
 .card-description h2 {
   font-size: 24px;
+  font-weight: bolder;
 }
 .card-description p {
   font-size: 14px;
   opacity: 0.7;
   font-weight: lighter;
+}
+.card-description:hover {
+  color:white;
 }
 .card-link {
   position: absolute;
@@ -47,5 +56,5 @@
   opacity: 0;
 }
 .card-link:hover {
-  opacity: 0.1;
+  color: white;
 }
